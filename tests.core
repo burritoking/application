@@ -1,0 +1,41 @@
+CAPI=2:
+
+name: "bci:sw:tests:1.0"
+description: "tests"
+
+filesets:
+
+  files_tests:
+    depend:
+      - bci:sw:base:1.0
+      - bci:sw:dif:1.0
+      - bci:sw:flash_ctrl:1.0
+      - bci:sw:top_athos_sw:1.0
+    files:
+#      - coverage_test.c
+#      - crt_test.c
+#      - flash_ctrl_test.c
+#      - pmp_smoketest_napot.c
+#      - pmp_smoketest_tor.c
+      - bubble_sort.c
+#      - demos.h: {is_include_file: true}
+#      - demos.c
+#      - hello_world.c
+    file_type: swCSource
+
+#  files_flash_ctrl:
+#    depend:
+#      - bci:sw:base:1.0
+#      - bci:sw:top_athos_sw:1.0
+#    files:
+#      - flash_ctrl.h :           {is_include_file: true}
+#      - regs/flash_ctrl_regs.h : {is_include_file: true}
+#      - flash_ctrl.c
+#    file_type: swCSource
+
+targets:
+  default: 
+    filesets:
+      - files_tests
+#      - files_flash_ctrl
+     
